@@ -10,5 +10,8 @@ EOT
 
 cd
 rm -f ovpnssl.sh
-echo "VPS will reboot now ..."
-restart
+echo "----------------------------------"
+echo "   Stunnel Updated Successfully   "
+echo "      VPS will reboot now ...     "
+echo "----------------------------------"
+reboot
