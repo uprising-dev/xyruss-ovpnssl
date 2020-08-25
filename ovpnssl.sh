@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cat /test <<-END
+cat test <<-END
 [openvpn]
 accept = 445
 connect = 127.0.0.1:110
