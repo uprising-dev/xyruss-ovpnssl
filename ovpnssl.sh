@@ -1,12 +1,9 @@
 #!/bin/sh
 
-cat <<EOT >> /etc/stunnel/stunnel.conf
+cd /etc/stunnel
 
-[openvpn]
-accept = 445
-connect = 127.0.0.1:110
-cert = /etc/stunnel/stunnel.pem
-EOT
+rm -f stunnel.conf
+wget https://raw.githubusercontent.com/uprising-dev/xyruss-ovpnssl/master/stunnel.conf
 
 cd
 rm -f ovpnssl.sh
@@ -14,4 +11,5 @@ echo "----------------------------------"
 echo "   Stunnel Updated Successfully   "
 echo "      VPS will reboot now ...     "
 echo "----------------------------------"
+sleep 3
 reboot
